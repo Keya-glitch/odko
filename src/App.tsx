@@ -190,12 +190,27 @@ export default function App() {
                   <Star fill="white" size={24} />
                 </div>
                 <div className="p-2 bg-white/5 rounded-xl">
-                  {/* Зургаа public хавтас руу image.jpg нэрээр хуулна уу */}
-                  <img 
-                    src="/image.jpg" 
-                    alt="Таны зураг" 
-                    className="w-[180px] h-[180px] object-cover rounded-lg border border-[#8b0000]/30"
-                  />
+                  <svg 
+                    viewBox="0 0 100 100" 
+                    className="w-[180px] h-[180px] stroke-[#8b0000] fill-none stroke-[2px]" 
+                    style={{ filter: 'drop-shadow(0 0 10px rgba(139,0,0,0.5))' }}
+                  >
+                    {/* Inverted Pentagram */}
+                    <circle cx="50" cy="50" r="45" />
+                    <path d="M 50 95 L 76.4 13.6 L 7.2 63.9 L 92.8 63.9 L 23.6 13.6 Z" />
+                    
+                    {/* Goat head */}
+                    <g fill="#8b0000" className="fill-[#8b0000]/20">
+                      {/* Face shape */}
+                      <path d="M 50 95 L 35 55 L 42 45 L 58 45 L 65 55 Z" />
+                      {/* Horns */}
+                      <path d="M 42 45 Q 30 20 23.6 13.6 Q 35 30 45 42 M 58 45 Q 70 20 76.4 13.6 Q 65 30 55 42" strokeLinecap="round"/>
+                      {/* Ears */}
+                      <path d="M 35 55 Q 20 55 7.2 63.9 Q 25 65 38 58 M 65 55 Q 80 55 92.8 63.9 Q 75 65 62 58" />
+                    </g>
+                    {/* Eyes */}
+                    <path d="M 40 55 L 46 52 L 40 58 Z M 60 55 L 54 52 L 60 58 Z" fill="#8b0000" stroke="none" />
+                  </svg>
                 </div>
               </motion.div>
 
